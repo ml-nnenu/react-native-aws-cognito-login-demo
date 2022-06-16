@@ -1,11 +1,12 @@
 import { StyleSheet, Text, View, TextInput, TouchableOpacity, Platform, Linking } from 'react-native';
 import { useEffect, useState } from 'react';
-import SingIn from './screens/SignIn';
-import SingUp from './screens/SignUp';
-import Home from './screens/Home';
+import SingIn from './components/SignIn';
+import SingUp from './components/SignUp';
+import Home from './components/Home';
 import { googleSignIn, checkCurrentSession } from './ultis/Auth'
 import { Hub } from 'aws-amplify';
 
+import OauthUI from './components/OauthUI';
 
 export default function App() {
 
@@ -29,11 +30,6 @@ export default function App() {
         // setCustomState(data);
       }
     });
-
-    (async () => {
-      const redirectUrl = await Linking.getInitialURL();
-      console.log(redirectUrl)
-    })();
 
     return unsubscribe;
   }, []);
@@ -102,6 +98,7 @@ export default function App() {
         </Text>
       </TouchableOpacity>
 
+      {/* <OauthUI /> */}
     </View>
   );
 }

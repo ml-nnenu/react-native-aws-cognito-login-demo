@@ -96,7 +96,7 @@ export async function signIn({
 export async function googleSignIn() {
     try {
         //https://stackoverflow.com/questions/66146633/login-option-is-not-available-please-try-another-one
-        await Auth.federatedSignIn({ provider: CognitoHostedUIIdentityProvider.Google });
+        await Auth.federatedSignIn({provider: CognitoHostedUIIdentityProvider.Google});
     } catch (error) {
         console.log('error signing in', error);
     }
