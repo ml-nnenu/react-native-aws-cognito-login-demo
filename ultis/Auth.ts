@@ -16,13 +16,15 @@ async function urlOpener(url: string, redirectUrl: string) {
     }
 }
 
-Amplify.configure({
-    ...awsconfig, oauth: {
-        ...awsconfig.oauth,
-        urlOpener
-    }
-});
-Auth.configure(awsconfig);
+const amplifyConfig = {
+        ...awsconfig, oauth: {
+            ...awsconfig.oauth,
+            urlOpener
+        }
+}
+
+Amplify.configure(amplifyConfig);
+Auth.configure(amplifyConfig);
 
 export function getData() {
     const apiName = 'api63bd31bf';

@@ -59,7 +59,8 @@
     "hostedUIDomainName": "rnfacebooklogin021dead6-021dead6",
     "authProvidersUserPool": [],
     "hostedUIProviderMeta": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"exp://127.0.0.1:19000/--/\"],\"LogoutURLs\":[\"exp://127.0.0.1:19000/--/\"]}",
-    "authProviders": []
+    "authProviders": [],
+    "hostedUIProviderCreds": "[]",
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"exp://127.0.0.1:19000/--/\",\"exp://192.168.8.130:19000/\"],\"LogoutURLs\":[\"exp://127.0.0.1:19000/--/\",\"exp://192.168.8.130:19000/\"]}"
   }
 }

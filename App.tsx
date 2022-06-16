@@ -3,8 +3,9 @@ import { useEffect, useState } from 'react';
 import SingIn from './screens/SignIn';
 import SingUp from './screens/SignUp';
 import Home from './screens/Home';
-import { googleSignIn, checkCurrentSession } from './ultis/Login'
+import { googleSignIn, checkCurrentSession } from './ultis/Auth'
 import { Hub } from 'aws-amplify';
+
 
 export default function App() {
 
@@ -16,10 +17,10 @@ export default function App() {
 
   useEffect(() => {
     const unsubscribe = Hub.listen("auth", ({ payload: { event, data } }) => {
-      console.log("hub data",data)
+      // console.log("hub data",data)
       switch (event) {
         case "signIn":
-          setIsRender({...isRender,signIn:false, home:true})
+          setIsRender({ ...isRender, signIn: false, home: true })
           break;
         case "signOut":
           // setUser(null);
@@ -28,6 +29,12 @@ export default function App() {
         // setCustomState(data);
       }
     });
+
+    (async () => {
+      const redirectUrl = await Linking.getInitialURL();
+      console.log(redirectUrl)
+    })();
+
     return unsubscribe;
   }, []);
 

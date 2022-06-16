@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TextInput, View, Text, TouchableOpacity } from 'react-native';
-import { signIn } from '../ultis/Login';
+import { signIn } from '../ultis/Auth';
 
 const SignIn = (
     { 

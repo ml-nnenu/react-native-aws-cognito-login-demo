@@ -1,6 +1,6 @@
 import React, { useState } from 'react'
 import { TouchableOpacity, View, Text } from 'react-native';
-import { getData, getDataWithToken, signOut } from '../ultis/Login';
+import { getData, getDataWithToken, signOut } from '../ultis/Auth';
 
 const Home = (
     {
