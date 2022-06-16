@@ -1,0 +1,26 @@
+{
+  "dev": {
+    "awscloudformation": {
+      "AuthRoleName": "amplify-rnfacebooklogin-dev-135659-authRole",
+      "UnauthRoleArn": "arn:aws:iam::952042177151:role/amplify-rnfacebooklogin-dev-135659-unauthRole",
+      "AuthRoleArn": "arn:aws:iam::952042177151:role/amplify-rnfacebooklogin-dev-135659-authRole",
+      "Region": "ap-southeast-1",
+      "DeploymentBucketName": "amplify-rnfacebooklogin-dev-135659-deployment",
+      "UnauthRoleName": "amplify-rnfacebooklogin-dev-135659-unauthRole",
+      "StackName": "amplify-rnfacebooklogin-dev-135659",
+      "StackId": "arn:aws:cloudformation:ap-southeast-1:952042177151:stack/amplify-rnfacebooklogin-dev-135659/cebf3a20-eba6-11ec-8671-02b46caca392",
+      "AmplifyAppId": "d3mqwuswoazeqg"
+    },
+    "categories": {
+      "function": {
+        "lambdaItems": {
+          "deploymentBucketName": "amplify-rnfacebooklogin-dev-135659-deployment",
+          "s3Key": "amplify-builds/lambdaItems-5851424a625874776571-build.zip"
+        }
+      },
+      "auth": {
+        "rnfacebooklogina12347a3": {}
+      }
+    }
+  }
+}
