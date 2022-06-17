@@ -61,6 +61,6 @@
     "hostedUIProviderMeta": "[]",
     "authProviders": [],
     "hostedUIProviderCreds": "[]",
-    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"exp://127.0.0.1:19000/--/\",\"exp://192.168.8.130:19000/\"],\"LogoutURLs\":[\"exp://127.0.0.1:19000/--/\",\"exp://192.168.8.130:19000/\"]}"
+    "oAuthMetadata": "{\"AllowedOAuthFlows\":[\"code\"],\"AllowedOAuthScopes\":[\"phone\",\"email\",\"openid\",\"profile\",\"aws.cognito.signin.user.admin\"],\"CallbackURLs\":[\"exp://127.0.0.1:19000/--/\",\"exp://192.168.8.130:19000/\",\"exp://192.168.1.6:19000/\"],\"LogoutURLs\":[\"exp://127.0.0.1:19000/--/\",\"exp://192.168.8.130:19000/\",\"exp://192.168.1.6:19000/\"]}"
   }
 }

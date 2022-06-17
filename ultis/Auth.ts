@@ -5,6 +5,7 @@ import * as WebBrowser from 'expo-web-browser';
 import { Linking, Platform } from 'react-native';
 
 async function urlOpener(url: string, redirectUrl: string) {
+    //prevent opening new browser during signOut by deleting the signOutRedirectUrl in aws-export.js
     if(!redirectUrl) return
 
     const result = await WebBrowser.openAuthSessionAsync(
@@ -116,17 +117,7 @@ export async function checkCurrentSession() {
 
 export async function signOut() {
     try {
-        // const currentSession = await checkCurrentSession();
-        // const client_id = currentSession?.getAccessToken().payload;
-        // const url = `${awsconfig.oauth.domain}/logout?client_id=${client_id}`
-
-        // await fetch(url);
-//         https://mydomain.auth.us-east-1.amazoncognito.com/logout?
-
-// client_id=ad398u21ijw3s9w3939&
-// logout_uri=https://myclient/logout
-
-        await Auth.signOut();
+        await Auth.signOut({global:true});
     } catch (error) {
         console.log('error signing out: ', error);
     }
