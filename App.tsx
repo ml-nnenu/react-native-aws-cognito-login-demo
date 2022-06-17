@@ -24,7 +24,7 @@ export default function App() {
           setIsRender({ ...isRender, signIn: false, home: true })
           break;
         case "signOut":
-          // setUser(null);
+          setIsRender({ ...isRender, home: false, signIn: true })
           break;
         case "customOAuthState":
         // setCustomState(data);
@@ -38,7 +38,7 @@ export default function App() {
     <View style={styles.container}>
       {isRender.signIn &&
         <>
-          <SingIn isRender={isRender} setIsRender={setIsRender} />
+          <SingIn/>
           <View
             style={{ marginVertical: 10 }}
           />
@@ -85,7 +85,7 @@ export default function App() {
           </TouchableOpacity>
         </>
       }
-      {isRender.home && <Home isRender={isRender} setIsRender={setIsRender} />}
+      {isRender.home && <Home/>}
       <View
         style={{ marginVertical: 10 }}
       />

@@ -2,21 +2,7 @@ import React, { useState } from 'react'
 import { TouchableOpacity, View, Text } from 'react-native';
 import { getData, getDataWithToken, signOut } from '../ultis/Auth';
 
-const Home = (
-    {
-        isRender, setIsRender }: {
-            isRender: {
-                signIn: boolean;
-                signUp: boolean;
-                home: boolean;
-            };
-            setIsRender: React.Dispatch<React.SetStateAction<{
-                signIn: boolean;
-                signUp: boolean;
-                home: boolean;
-            }>>
-        }
-) => {
+const Home = () => {
     const [fetchResult, setFetchResult] = useState("Fetch Result: ")
 
     return (
@@ -72,7 +58,6 @@ const Home = (
             <TouchableOpacity
                 onPress={() => {
                     signOut();
-                    setIsRender({ ...isRender, home: false, signIn: true })
                 }}
             >
                 <Text>

@@ -2,21 +2,7 @@ import React, { useState } from 'react'
 import { TextInput, View, Text, TouchableOpacity } from 'react-native';
 import { signIn } from '../ultis/Auth';
 
-const SignIn = (
-    { 
-        isRender, setIsRender }: {
-        isRender: {
-            signIn: boolean;
-            signUp: boolean;
-            home: boolean;
-        };
-        setIsRender: React.Dispatch<React.SetStateAction<{
-            signIn: boolean;
-            signUp: boolean;
-            home: boolean;
-        }>>
-    }
-) => {
+const SignIn = () => {
     const [username, setUsername] = useState("");
     const [password, setPassword] = useState("");
     return (
