@@ -5,6 +5,8 @@ import * as WebBrowser from 'expo-web-browser';
 import { Linking, Platform } from 'react-native';
 
 async function urlOpener(url: string, redirectUrl: string) {
+    if(!redirectUrl) return
+
     const result = await WebBrowser.openAuthSessionAsync(
         url,
         redirectUrl
@@ -105,7 +107,8 @@ export async function googleSignIn() {
 export async function checkCurrentSession() {
     try {
         const result = await Auth.currentSession();
-        console.log("current session", result)
+        console.log(result)
+        return result
     } catch (error) {
         console.log('error current session: ', error);
     }
@@ -113,6 +116,16 @@ export async function checkCurrentSession() {
 
 export async function signOut() {
     try {
+        // const currentSession = await checkCurrentSession();
+        // const client_id = currentSession?.getAccessToken().payload;
+        // const url = `${awsconfig.oauth.domain}/logout?client_id=${client_id}`
+
+        // await fetch(url);
+//         https://mydomain.auth.us-east-1.amazoncognito.com/logout?
+
+// client_id=ad398u21ijw3s9w3939&
+// logout_uri=https://myclient/logout
+
         await Auth.signOut();
     } catch (error) {
         console.log('error signing out: ', error);
